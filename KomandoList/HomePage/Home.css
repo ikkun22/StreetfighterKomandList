@@ -1,0 +1,173 @@
+/* Home.html 専用スタイル */
+body {
+  background-color:#0f1724;
+  background-image:
+    /* ① 支柱のボルト（支柱の中心＝タイル右端から 9px、縦 200px おき） */
+    radial-gradient(circle at calc(100% - 9px) 30px,
+      rgba(203,213,225,0.35) 0 2px,
+      rgba(2,6,15,0.80) 2px 3.5px,
+      transparent 3.5px),
+    /* ② 縦の支柱（画面幅の 25% ごと ＝ 4本・太さ 18px） */
+    /*    本数を変えるなら 25% を書きかえる：3本=33.33% / 5本=20% */
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 calc(25% - 18px),
+      rgba(2,6,15,0.95) calc(25% - 18px) calc(25% - 16px),
+      rgba(148,163,184,0.45) calc(25% - 16px) calc(25% - 12px),
+      rgba(51,65,85,0.92) calc(25% - 12px) calc(25% - 4px),
+      rgba(2,6,15,0.95) calc(25% - 4px) 25%
+    ),
+    /* ③ 上の横棒 */
+    linear-gradient(
+      180deg,
+      rgba(2,6,15,0.95) 0 2px,
+      rgba(148,163,184,0.45) 2px 6px,
+      rgba(51,65,85,0.92) 6px 15px,
+      rgba(2,6,15,0.95) 15px 18px,
+      transparent 18px
+    ),
+    /* ④ 真ん中の横線（張り線） */
+    linear-gradient(
+      180deg,
+      transparent 0 calc(50% - 1px),
+      rgba(148,163,184,0.45) calc(50% - 1px) calc(50% + 1px),
+      transparent calc(50% + 1px)
+    ),
+    /* ⑤ 金網：右上がりの針金 */
+    repeating-linear-gradient(
+      60deg,
+      rgba(226,232,240,0.14) 0px,
+      rgba(226,232,240,0.14) 2px,
+      rgba(8,12,20,0.45) 2px,
+      rgba(8,12,20,0.45) 4px,
+      transparent 4px,
+      transparent 44px
+    ),
+    /* ⑥ 金網：右下がりの針金 */
+    repeating-linear-gradient(
+      -60deg,
+      rgba(226,232,240,0.14) 0px,
+      rgba(226,232,240,0.14) 2px,
+      rgba(8,12,20,0.45) 2px,
+      rgba(8,12,20,0.45) 4px,
+      transparent 4px,
+      transparent 44px
+    ),
+    /* ⑦ 奥のほのかな赤い光 */
+    radial-gradient(ellipse at 20% 0%, rgba(220,38,38,0.20), transparent 60%),
+    /* ⑧ 土台 */
+    linear-gradient(180deg, #0b111d 0%, #0f1724 45%, #1e0e16 100%);
+  background-size:
+    25% 200px,  /* ①ボルト：横は支柱と同じ 25%、縦は 200px おき */
+    auto, auto, auto, auto, auto, auto, auto;
+  background-attachment:fixed;
+  color:#fff;
+  font-family: sans-serif;
+  padding:40px;
+  min-height:100vh;
+}
+h1 { margin-bottom:24px; }
+.chars {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap:20px;
+}
+.char-card {
+  display:block;
+  overflow:hidden;
+  background:#111827;
+  border:1px solid rgba(255,255,255,0.06);
+  border-radius:14px;
+  text-decoration:none;
+  color:#fff;
+  box-shadow:0 4px 14px rgba(0,0,0,0.35);
+  transition:transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+.char-card:hover {
+  transform:translateY(-4px);
+  border-color:rgba(220,38,38,0.5);
+  box-shadow:0 10px 24px rgba(220,38,38,0.25);
+}
+.char-card img {
+  display:block;
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  object-position:top;
+  transition:transform 0.3s;
+}
+.char-card:hover img {
+  transform:scale(1.06);
+}
+.char-name {
+  display:block;
+  padding:14px 10px;
+  text-align:center;
+  font-size:16px;
+  font-weight:bold;
+}
+.hidden-char{
+  display:none;
+}
+.controls{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:12px 0 18px 0;
+}
+.btn.secondary{
+  background:transparent;
+  border:1px dashed rgba(255,255,255,0.04);
+  color:var(--muted);
+}
+
+.search{
+  flex:1;
+  min-width:200px;
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+.search input{
+  width:100%;
+  padding:8px 10px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,0.04);
+  background:transparent;
+  color:#FAF5EE;
+  font-size:14px;
+}
+
+/* ===== 検索ボックス ===== */
+.search-box{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#F4F1E8;
+  border:2px solid #1f2937;
+  border-radius:14px;
+  padding:12px 16px;
+
+  width:100%;
+  max-width:500px;
+  margin:0 auto 24px auto;
+}
+
+.search-box:focus-within{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(96,165,250,0.15);
+}
+
+.search-icon{
+  font-size:18px;
+  opacity:0.7;
+}
+
+.search-box input{
+  border:none;
+  outline:none;
+  background:transparent;
+  color:#020617;
+  font-size:15px;
+  width:100%;
+}

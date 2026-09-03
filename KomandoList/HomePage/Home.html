@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>キャラクターリスト</title>
+  <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>ストリートファイター キャラクターリスト</h1>
+      <p>※このサイトはストリートファイターをやったことがある、または知っている人向けに作ったサイトです。</p>
+      <p>操作方法：例</p>
+      <img src="sousa.jpg" alt="操作" style="width:500px; height:auto;">
+      <ul>
+	<li>P=パンチ　K=キック（P弱やK強などは、弱パンチや強キックになる。）</li>
+	<li>コマンド例：リュウで LS を↓ ↘ →の順にたおし、P(△ または □ または R1)のボタンを押すと波動拳を出すことができる。</li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="controls">
+    <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input id="filter" placeholder="キャラクターを入力(カタカナで書いて下さい)" />
+    </div>
+  </div>
+
+  <div class="chars" id="tableWrap">
+    <a class="char-card" href="../RyuList/RyuKomando.html">
+      <img src="Ryu.jpg" alt="リュウ">
+      <span class="char-name">リュウ</span>
+    </a>
+
+    <a class="char-card" href="../KenList/KenKomando.html">
+      <img src="Ken.jpg" alt="ケン">
+      <span class="char-name">ケン</span>
+    </a>
+
+    <a class="char-card" href="../GairuList/GairuKomando.html">
+      <img src="Gairu.jpg" alt="ガイル">
+      <span class="char-name">ガイル</span>
+    </a>
+
+    <a class="char-card" href="../Chun-LiList/Chun-LiKomando.html">
+      <img src="Chun-Li.jpg" alt="春麗">
+      <span class="char-name"><ruby>春麗<rt>チュンリ</rt></ruby></span>
+    </a>
+
+    <a class="char-card" href="../DarusimuList/DarusimuKomando.html">
+      <img src="Darusimu.jpg" alt="ダルシム">
+      <span class="char-name">ダルシム</span>
+    </a>
+
+    <a class="char-card" href="../HondaList/HondaKomando.html">
+      <img src="Honda.jpg" alt="本田">
+      <span class="char-name">エドモンド<ruby>本田<rt>ホンダ</rt></ruby></span>
+    </a>
+
+    <a class="char-card" href="../ZangiehuList/ZangiehuKomando.html">
+      <img src="Zangiehu.jpg" alt="ザンギエフ">
+      <span class="char-name">ザンギエフ</span>
+    </a>
+
+    <a class="char-card">
+      <img src="GoukiNull.jpg" alt="豪鬼">
+      <span class="char-name">? ? ?</span>
+    </a>
+
+    <a class="char-card hidden-char" href="../GoukiList/GoukiKomando.html">
+      <img src="Gouki.jpg" alt="豪鬼">
+      <span class="char-name"><ruby>豪鬼<rt>ゴウキ</rt></ruby></span>
+    </a>
+  </div>
+
+  <footer>
+    <div>こちらの公式サイトを参考にして作っています。</div>
+    <div>https://www.streetfighter.com/6/ja-jp/character</div>
+  </footer>
+
+  <script>
+(function(){
+  const filter = document.getElementById('filter');
+  const wrap = document.getElementById('tableWrap');
+
+  filter.addEventListener('input', () => {
+    const q = filter.value.trim().toLowerCase();
+    const cards = wrap.querySelectorAll('.char-card');
+
+    for (let c of cards) {
+      const text = (c.textContent || '').toLowerCase();
+
+      // 検索文字が空なら hidden-char は隠す
+      if (q === '') {
+        c.style.display = c.classList.contains('hidden-char') ? 'none' : '';
+        continue;
+      }
+
+      // 検索中は一致したものだけ表示（hidden-charのCSSより優先させるためblockを明示）
+      c.style.display = text.includes(q) ? 'block' : 'none';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
