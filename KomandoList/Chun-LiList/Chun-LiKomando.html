@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>春麗 コマンドリスト</title>
+  <link rel="stylesheet" href="../Komando.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>ストリートファイター コマンドリスト</h1>
+      <div class="note">入力の⇐などの矢印は長めに押す</div>
+      <a href="../HomePage/Home.html">キャラクターリストに戻る</a>
+      <details>
+	<summary>操作方法：例</summary>
+      <img src="sousa.jpg" alt="操作" style="width:500px; height:auto;">
+      <ul>
+	<li>P=パンチ　K=キック（P弱やK強などは、弱パンチや強キックになる。）</li>
+	<li>コマンド例：リュウで LS を↓ ↘ →の順にたおし、P(△ または □ または R1)のボタンを押すと波動拳を出すことができる。</li>
+      </ul>
+	</details>
+    </div>
+  </header>
+
+  <div class="controls">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input id="filter"
+      placeholder="技名・コマンド・説明を検索（ルビにはひらがなをふっています）"/>
+  </div>
+</div>
+
+  <div class="table-wrap" id="tableWrap">
+    <table id="commandTable" aria-label="コマンドリスト">
+      <thead>
+        <tr>
+            <td>
+        <img src="Chun-Li.jpg" alt="春麗" style="width:300px; height:auto;">
+            </td>
+        </tr>
+        <tr>
+          <th style="width:160px">技名</th>
+          <th style="width:160px">入力</th>
+          <th>説明 / 備考</th>
+          
+          <th style="width:120px">カテゴリ / メモ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- サンプル行 -->
+        <tr>
+          <td><ruby>気功拳<rt>きこうけん</rt></ruby></td>
+          <td><span class="input-notation">⇐ → + P</span></td>
+          <td>
+        前方に気弾を飛ばす技。離れた間合いから攻撃を与える手段として有効。
+        <video src="kikouken.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span>遠距離</td>
+        </tr>
+        
+        <tr>
+          <td><ruby>百裂脚<rt>ひゃくれつきゃく</rt></ruby></td>
+          <td><span class="input-notation">↓ ↘ → + K</span></td>
+          <td>蹴りによる連撃を高速で繰り出す技。通常技からコンボを繋ぐのに有効。
+            <video src="hyakuretukyaku.mp4" controls width="320" height="180">
+        </video><br>
+            ジャンプ中に繰り出すことも出来る。<br>
+	    ジャンプ中の攻撃からコンボとして繋ぐと効果的。
+            <video src="kutyuhyakuretu.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span>近距離</td>
+        </tr>
+        
+        <tr>
+          <td>スピニングバードキック</td>
+          <td><span class="input-notation">⇓ ↑ + K</span></td>
+          <td>体勢を逆さにした状態で開脚し、連続した回転蹴りを繰り出す技。<br>
+            ダメージが高く、大きな隙に対するコンボへ組み込むのが有効。
+            <video src="supiningubado.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span>近距離</td>
+        </tr>
+        
+        <tr>
+          <td><ruby>覇山蹴<rt>はざんしゅう</rt></ruby></td>
+          <td><span class="input-notation">↓ ↙ ← + K</span></td>
+          <td>前方に跳び上がり、回転してからの蹴りを叩き付ける技。<br>
+            相手の足払いに対するけん制や接近手段として有効。
+            <video src="hazansyuu.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span>中距離</td>
+        </tr>
+        
+        <tr>
+          <td><ruby>気功掌<rt>きこうしょう</rt></ruby></td>
+          <td><span class="input-notation">↓ ↘ → ↓ ↘ → + P</span></td>
+          <td>自身の目の前に気功の塊を発生させて攻撃する技。<br>
+            攻撃の出が早く、無敵もあるので切り返しとしても使える。
+            <video src="kikousyou.mp4" controls width="320" height="180">
+        </video><br>
+            ジャンプ中にも発動出来る。ジャンプ中の攻撃からコンボとして繋ぐと効果的。
+            <video src="kutyukikousyou.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">スーパーアーツ1</span>中距離<br>～近距離</td>
+        </tr>
+        
+        <tr>
+          <td><ruby>蒼天乱華<rt>そうてんらんか</rt></ruby></td>
+          <td><span class="input-notation">↓ ↙ ← ↓ ↙ ← + K</span></td>
+          <td>回し蹴りからの連撃で相手を打ち上げ、渾身の蹴りを叩き込む技。<br>
+            大きいダメージを奪いたい時のコンボや切り返しに有効。
+            <video src="souten.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">スーパーアーツ3</span>近距離</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <div>こちらの公式サイトを参考にして作っています。</div>
+    <div>https://www.streetfighter.com/6/ja-jp/character/chunli/movelist</div>
+  </footer>
+
+  <script>
+    // 検索フィルタ
+    (function(){
+      const filter = document.getElementById('filter');
+      const table = document.getElementById('commandTable');
+      filter.addEventListener('input', () => {
+        const q = filter.value.trim().toLowerCase();
+        const rows = table.tBodies[0].rows;
+        for (let r of rows) {
+          const text = (r.textContent || '').toLowerCase();
+          r.style.display = text.indexOf(q) === -1 ? 'none' : '';
+        }
+      });
+    })();
+
+    // ここからカスタマイズ方法の表示（コンソールに簡単メッセージ）
+    console.log('このファイルを編集して、tbody に行を追加してください。入力表記は → ↓ ↘ などの矢印記号か、QCF(QCB) 等の略語でもOKです。');
+  </script>
+</body>
+</html>
