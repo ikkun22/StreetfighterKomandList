@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ダルシム コマンドリスト</title>
+
+  <link rel="stylesheet" href="../Komando.css">
+
+</head>
+<body>
+  <header>
+    <div>
+      <h1>ストリートファイター コマンドリスト</h1>
+      <a href="../HomePage/Home.html">キャラクターリストに戻る</a>
+      <details>
+	<summary>操作方法：例</summary>
+      <img src="sousa.jpg" alt="操作" style="width:500px; height:auto;">
+      <ul>
+	<li>P=パンチ　K=キック（P弱やK強などは、弱パンチや強キックになる。）</li>
+	<li>コマンド例：リュウで LS を↓ ↘ →の順にたおし、P(△ または □ または R1)のボタンを押すと波動拳を出すことができる。</li>
+      </ul>
+	</details>
+    </div>
+  </header>
+
+  <div class="controls">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input id="filter"
+      placeholder="技名・コマンド・説明を検索（ルビにはひらがなをふっています）"/>
+  </div>
+</div>
+
+  <div class="table-wrap" id="tableWrap">
+    <table id="commandTable" aria-label="コマンドリスト">
+      <thead>
+        <tr>
+            <td>
+        <img src="Darusimu.jpg" alt="ダルシム" style="width:300px; height:auto;">
+            </td>
+        </tr>
+        <tr>
+          <th style="width:160px">技名</th>
+          <th style="width:160px">入力</th>
+          <th>説明 / 備考</th>
+          
+          <th style="width:120px">カテゴリ / メモ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- サンプル行 -->        
+        <tr>
+          <td>ヨガファイア</td>
+          <td><span class="input-notation">↓ ↘ → + P</span></td>
+          <td>口から火の玉を吹いて飛ばす技。離れた間合いから攻撃する手段として有効。
+            <video src="yogafaia.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span>遠距離</td>
+        </tr>
+        
+        <tr>
+          <td>ヨガフレイム</td>
+          <td><span class="input-notation">→ ↘ ↓ ↙ ← + P</span></td>
+          <td>口から大きな炎を吹き出して放射する技。<br>
+	      コンボへの組み込みや地上けん制に使える。
+            <video src="yogahureimu.mp4" controls width="320" height="180">
+        </video>
+	</td>
+          <td><span class="tag">必殺技</span>近距離</td>
+        </tr>
+        
+        <tr>
+          <td>ヨガフロート</td>
+          <td><span class="input-notation">↓ or ↘ + KK</span></td>
+          <td>地上から空中に浮き上がって一定時間浮遊する技。<br>
+            浮遊中はジャンプ攻撃や空中必殺技を出す事が出来る。
+            <video src="yogahurouto.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span></td>
+        </tr>
+
+	<tr>
+          <td>ヨガテレポート</td>
+          <td><span class="input-notation">← or → + PPP or KKK</span></td>
+          <td>一定距離を瞬時に移動する技。<br>
+	      出始めの無敵時間を活かした回避や、攻めの起点に使える。
+            <video src="yogaterepouto.mp4" controls width="320" height="180">
+        </video><br>
+            ジャンプ中に繰り出すことも出来る。<br>
+	    移動後はジャンプ攻撃や空中必殺技を出す事が出来る。
+            <video src="kuutyuuyogaterepouto.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span></td>
+        </tr>
+
+	<tr>
+          <td>ヨガランス</td>
+          <td><span class="input-notation">← + P強</span></td>
+          <td>相手の斜め前方のジャンプに対して強く、<br>
+              リーチの長いパンチ。
+            <video src="yogaransu.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">特殊技</span>中距離</td>
+        </tr>
+
+	<tr>
+          <td>ドリル<ruby>頭突き<rt>ずつき</rt></ruby></td>
+          <td><span class="input-notation">↓ + P弱</span></td>
+          <td>ジャンプ中に繰り出す、必殺技キャンセル可能な急降下攻撃。
+            <video src="doriruzutuki.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">特殊技</span>中距離</td>
+        </tr>
+        
+        <tr>
+          <td>ヨガインフェルノ</td>
+          <td><span class="input-notation">↓ ↘ → ↓ ↘ → + P</span></td>
+          <td>口から様々な方向に炎を放射する技。<br>
+              技の出が早く、反撃やコンボに使いやすい。<br>
+	      入力するボタンによって、炎を吹き出す方向が変化する。
+            <video src="yogainferuno.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">スーパーアーツ1</span>近距離</td>
+        </tr>
+        
+        <tr>
+          <td>ヨガマーシレス</td>
+          <td><span class="input-notation">↓ ↘ → ↓ ↘ → + K</span></td>
+          <td>相手に連撃を叩き込み、強烈な頭突きで叩き付ける高威力な技。<br>
+              コンボへの組み込みや連係への割り込み、対空と用途が広い。
+            <video src="yogamaasiresu.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">スーパーアーツ3</span>近距離</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <div>こちらの公式サイトを参考にして作っています。</div>
+    <div>https://www.streetfighter.com/6/ja-jp/character/dhalsim/movelist</div>
+  </footer>
+
+  <script>
+    // 検索フィルタ
+    (function(){
+      const filter = document.getElementById('filter');
+      const table = document.getElementById('commandTable');
+      filter.addEventListener('input', () => {
+        const q = filter.value.trim().toLowerCase();
+        const rows = table.tBodies[0].rows;
+        for (let r of rows) {
+          const text = (r.textContent || '').toLowerCase();
+          r.style.display = text.indexOf(q) === -1 ? 'none' : '';
+        }
+      });
+    })();
+
+    // ここからカスタマイズ方法の表示（コンソールに簡単メッセージ）
+    console.log('このファイルを編集して、tbody に行を追加してください。入力表記は → ↓ ↘ などの矢印記号か、QCF(QCB) 等の略語でもOKです。');
+  </script>
+</body>
+</html>

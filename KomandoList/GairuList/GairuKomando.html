@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ガイル コマンドリスト</title>
+  <link rel="stylesheet" href="../Komando.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>ストリートファイター コマンドリスト</h1>
+      <div class="note">入力の⇐などの矢印は長めに押す</div>
+      <a href="../HomePage/Home.html">キャラクターリストに戻る</a>
+      <details>
+	<summary>操作方法：例</summary>
+      <img src="sousa.jpg" alt="操作" style="width:500px; height:auto;">
+      <ul>
+	<li>P=パンチ　K=キック（P弱やK強などは、弱パンチや強キックになる。）</li>
+	<li>コマンド例：リュウで LS を↓ ↘ →の順にたおし、P(△ または □ または R1)のボタンを押すと波動拳を出すことができる。</li>
+      </ul>
+	</details>
+    </div>
+  </header>
+
+  <div class="controls">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input id="filter"
+      placeholder="技名・コマンド・説明を検索"/>
+  </div>
+</div>
+
+  <div class="table-wrap" id="tableWrap">
+    <table id="commandTable" aria-label="コマンドリスト">
+      <thead>
+        <tr>
+            <td>
+        <img src="Gairu.jpg" alt="ガイル" style="width:300px; height:auto;">
+            </td>
+        </tr>
+        <tr>
+          <th style="width:160px">技名</th>
+          <th style="width:160px">入力</th>
+          <th>説明 / 備考</th>
+          
+          <th style="width:120px">カテゴリ / メモ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- サンプル行 -->
+        <tr>
+          <td>ソニックブーム</td>
+          <td><span class="input-notation">⇐ → + P</span></td>
+          <td>
+        高速で両腕を交差させ、回転する真空波を飛ばす技。<br>
+            離れた間合いのけん制や攻めの起点として有効。
+        <video src="sonikkubuumu.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span>遠距離</td>
+        </tr>
+        
+        <tr>
+          <td>サマーソルトキック</td>
+          <td><span class="input-notation">⇓ ↑ + K</span></td>
+          <td>後方へ宙返りをしながら強烈に蹴り上げる技。<br>
+            相手のジャンプ攻撃に対して無敵があるので、対空として使える。
+            <video src="samasoruto.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span>近距離</td>
+        </tr>
+        
+        <tr>
+          <td>ソニックハリケーン</td>
+          <td><span class="input-notation">⇐ → ← → + P</span></td>
+          <td>前方に巨大な真空波を放つ技。<br>
+	    切り返しやコンボ、飛び道具対策など、幅広い状況で使いやすい。<br>
+            発動時の入力によって、真空波を斜め上方向へ撃ち出す事が可能。
+            <video src="sonikkuharikeen.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">スーパーアーツ1</span>近距離</td>
+        </tr>
+        
+        <tr>
+          <td>ソリッドパンチャ―</td>
+          <td><span class="input-notation">↓ ↙ ← ↓ ↙ ← + P</span></td>
+          <td>両腕に真空波を纏い、必殺技を開放する技。<br>
+	      Pボタンで、ソニックブレイクが使用可能となる。
+            <video src="soriddo.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">スーパーアーツ2</span>中距離</td>
+        </tr>
+        
+        <tr>
+          <td>クロスファイアサマーソルト</td>
+          <td><span class="input-notation">⇐ → ← → + K</span></td>
+          <td>相手を上空に打ち上げ、渾身のサマーソルトキックへ繋ぐ技。<br>
+            出始めの無敵時間を活かした対空や切り返しに狙える。
+            <video src="kurosufaia.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">スーパーアーツ3</span>近距離</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <div>こちらの公式サイトを参考にして作っています。</div>
+    <div>https://www.streetfighter.com/6/ja-jp/character/guile/movelist</div>
+  </footer>
+
+  <script>
+    // 検索フィルタ
+    (function(){
+      const filter = document.getElementById('filter');
+      const table = document.getElementById('commandTable');
+      filter.addEventListener('input', () => {
+        const q = filter.value.trim().toLowerCase();
+        const rows = table.tBodies[0].rows;
+        for (let r of rows) {
+          const text = (r.textContent || '').toLowerCase();
+          r.style.display = text.indexOf(q) === -1 ? 'none' : '';
+        }
+      });
+    })();
+
+    // ここからカスタマイズ方法の表示（コンソールに簡単メッセージ）
+    console.log('このファイルを編集して、tbody に行を追加してください。入力表記は → ↓ ↘ などの矢印記号か、QCF(QCB) 等の略語でもOKです。');
+  </script>
+</body>
+</html>
