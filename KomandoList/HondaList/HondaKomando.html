@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>エドモンド本田 コマンドリスト</title>
+
+  <link rel="stylesheet" href="../Komando.css">
+
+</head>
+<body>
+  <header>
+    <div>
+      <h1>ストリートファイター コマンドリスト</h1>
+      <div class="note">入力の⇐などの矢印は長めに押す</div>
+      <a href="../HomePage/Home.html">キャラクターリストに戻る</a>
+      <details>
+	<summary>操作方法：例</summary>
+      <img src="sousa.jpg" alt="操作" style="width:500px; height:auto;">
+      <ul>
+	<li>P=パンチ　K=キック（P弱やK強などは、弱パンチや強キックになる。）</li>
+	<li>コマンド例：リュウで LS を↓ ↘ →の順にたおし、P(△ または □ または R1)のボタンを押すと波動拳を出すことができる。</li>
+      </ul>
+	</details>
+    </div>
+  </header>
+
+  <div class="controls">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input id="filter"
+      placeholder="技名・コマンド・説明を検索（ルビにはひらがなをふっています）"/>
+  </div>
+</div>
+
+  <div class="table-wrap" id="tableWrap">
+    <table id="commandTable" aria-label="コマンドリスト">
+      <thead>
+        <tr>
+            <td>
+        <img src="Honda.jpg" alt="本田" style="width:300px; height:auto;">
+            </td>
+        </tr>
+        <tr>
+          <th style="width:160px">技名</th>
+          <th style="width:160px">入力</th>
+          <th>説明 / 備考</th>
+          
+          <th style="width:120px">カテゴリ / メモ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- サンプル行 -->
+        <tr>
+          <td>スーパー<ruby>頭突き<rt>ずつき</rt></ruby></td>
+          <td><span class="input-notation">⇐ → + P</span></td>
+          <td>頭突きを出しながら水平に飛んで突進する技。<br>
+	      接近手段を兼ねた奇襲やコンボ中の追撃として有効。
+        <video src="supazutuki.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span>近距離～中距離</td>
+        </tr>
+        
+        <tr>
+          <td>スーパー<ruby>百貫落とし<rt>ひゃっかんおとし</rt></ruby></td>
+          <td><span class="input-notation">⇓ ↑ + K</span></td>
+          <td>斜め上方向へ飛び上がり、体重を掛けた垂直落下で攻撃する技。<br>
+	      地上の攻撃を回避しながらの奇襲やガードの揺さ振りに使える。
+            <video src="hyakkan.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span>近距離～中距離</td>
+        </tr>
+        
+        <tr>
+          <td><ruby>百裂張り手<rt>ひゃくれつはりて</rt></ruby></td>
+          <td><span class="input-notation">↓ ↙ ← + P</span></td>
+          <td>高速で張り手の連打を繰り出す技。通常技からのコンボや連係で使いやすい。
+            <video src="hyakuretuharite.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span>近距離</td>
+        </tr>
+        
+        <tr>
+          <td><ruby>大銀杏投げ<rt>おおいちょうなげ</rt></ruby></td>
+          <td><span class="input-notation">→ ↘ ↓ ↙ ← + K</span></td>
+          <td>前方相手の頭部を掴んで叩き付け、百貫落としで追撃する投げ技。<br>
+            近距離で相手のガードを崩す手段として有効。
+            <video src="ooityou.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span>近距離</td>
+        </tr>
+        
+        <tr>
+          <td>スーパー<ruby>鬼無双<rt>おにむそう</rt></ruby></td>
+          <td><span class="input-notation">⇐ → ← → + K</span></td>
+          <td>頭突きの突進と張り手連打から、捻りを加えた頭突きに繋ぐ技。<br>
+              突進する距離が長く、飛び道具対策やコンボに使いやすい。
+            <video src="onimusou.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">スーパーアーツ2</span>近距離<br>～中距離</td>
+        </tr>
+        
+        <tr>
+          <td><ruby>千秋楽<rt>せんしゅうらく</rt></ruby></td>
+          <td><span class="input-notation">↓ ↙ ← ↓ ↙ ← + P</span></td>
+          <td>相手を動かして土俵を描き、寄りきりから強烈に投げ落とす技。<br>
+            出始めのリーチが長く、出も早いので様々な状況で狙っていける。
+            <video src="sensyuuraku.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">スーパーアーツ3</span>近距離</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <div>こちらの公式サイトを参考にして作っています。</div>
+    <div>https://www.streetfighter.com/6/ja-jp/character/ehonda/movelist</div>
+  </footer>
+
+  <script>
+    // 検索フィルタ
+    (function(){
+      const filter = document.getElementById('filter');
+      const table = document.getElementById('commandTable');
+      filter.addEventListener('input', () => {
+        const q = filter.value.trim().toLowerCase();
+        const rows = table.tBodies[0].rows;
+        for (let r of rows) {
+          const text = (r.textContent || '').toLowerCase();
+          r.style.display = text.indexOf(q) === -1 ? 'none' : '';
+        }
+      });
+    })();
+
+    // ここからカスタマイズ方法の表示（コンソールに簡単メッセージ）
+    console.log('このファイルを編集して、tbody に行を追加してください。入力表記は → ↓ ↘ などの矢印記号か、QCF(QCB) 等の略語でもOKです。');
+  </script>
+</body>
+</html>
