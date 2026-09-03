@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>リュウ コマンドリスト</title>
+  <link rel="stylesheet" href="../Komando.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>ストリートファイター コマンドリスト</h1>
+      <a href="../HomePage/Home.html">キャラクターリストに戻る</a>
+      <details>
+	<summary>操作方法：例</summary>
+      <img src="sousa.jpg" alt="操作" style="width:500px; height:auto;">
+      <ul>
+	<li>P=パンチ　K=キック（P弱やK強などは、弱パンチや強キックになる。）</li>
+	<li>コマンド例：リュウで LS を↓ ↘ →の順にたおし、P(△ または □ または R1)のボタンを押すと波動拳を出すことができる。</li>
+      </ul>
+	</details>
+    </div>
+  </header>
+
+  <div class="controls">
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input id="filter"
+      placeholder="技名・コマンド・説明を検索（ルビにはひらがなをふっています）"/>
+  </div>
+    <!-- <button class="btn" id="copyBtn">選択をクリップボードにコピー</button> -->
+    <!-- <button class="btn secondary" id="exportCsv">CSV エクスポート</button> -->
+    <!-- <button class="btn secondary" onclick="window.print()">印刷</button> -->
+  </div>
+  <div class="table-wrap" id="tableWrap">
+    <table id="commandTable" aria-label="コマンドリスト">
+      <thead>
+        <tr>
+            <td>
+        <img src="ryu.jpg" alt="リュウ" style="width:300px; height:auto;">
+            </td>
+        </tr>
+        <tr>
+          <th style="width:160px">技名</th>
+          <th style="width:160px">入力</th>
+          <th>説明 / 備考</th>
+          
+          <th style="width:120px">カテゴリ / メモ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- サンプル行 -->
+        <tr>
+          <td><ruby>昇龍拳<rt>しょうりゅうけん</rt></ruby></td>
+          <td><span class="input-notation">→ ↓ ↘ + P</span></td>
+          <td>
+        強烈なアッパーと共に飛び上がる技。<br>
+	昇龍拳は相手のジャンプ攻撃に対して無敵となる。
+        <video src="syouryuuken.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span>近距離</td>
+        </tr>
+        
+        <tr>
+          <td><ruby>波動拳<rt>はどうけん</rt></ruby></td>
+          <td><span class="input-notation">↓ ↘ → + P</span></td>
+          <td>前方に気弾を飛ばす技。離れた間合いから攻撃する手段として有効。
+            <video src="hadouken.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span>遠距離</td>
+        </tr>
+        
+        <tr>
+          <td><ruby>竜巻旋風脚<rt>たつまきせんぷうきゃく</rt></ruby></td>
+          <td><span class="input-notation">↓ ↙ ← + K</span></td>
+          <td>前進する連続回し蹴りを繰り出す技。相手を吹き飛ばすことに長けた回転蹴り。
+            <video src="tatumaki.mp4" controls width="320" height="180">
+        </video><br>
+            ジャンプ中に繰り出すことも出来る。<br>
+	    ジャンプの軌道を変えたり空中からの奇襲に長けた技。
+            <video src="kuutyuutatumaki.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span>中距離～近距離</td>
+        </tr>
+        
+        <tr>
+          <td><ruby>上段足刀蹴り<rt>じょうだんそくとうげり</rt></ruby></td>
+          <td><span class="input-notation">↓ ↘ → + K</span></td>
+          <td>素早く間合いを詰める突進蹴り。相手の攻撃の隙を突いたり奇襲を狙える蹴り技、<br>
+            蹴り足の先端を相手に当てるように繰り出すと有効。
+            <video src="sokutou.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">必殺技</span>近距離</td>
+        </tr>
+        
+        <tr>
+          <td><ruby>真空波動拳<rt>しんくうはどうけん</rt></ruby></td>
+          <td><span class="input-notation">↓ ↘ → ↓ ↘ → + P</span></td>
+          <td>掌に体内の気を集中させ、圧縮して放つ波動拳。<br>
+            攻撃の出が早く、無敵もあるので切り返しとしても使える。
+            <video src="sinkuu.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">スーパーアーツ1</span>中距離</td>
+        </tr>
+        
+        <tr>
+          <td><ruby>真・昇龍拳<rt>しん　しょうりゅうけん</rt></ruby></td>
+          <td><span class="input-notation">↓ ↘ → ↓ ↘ → + K</span></td>
+          <td>近距離で繰り出す高威力の昇龍拳。相手の急所を狙い確実に倒す切り札。
+            <video src="sin-syouryuken.mp4" controls width="320" height="180">
+        </video>
+        </td>
+          <td><span class="tag">スーパーアーツ3</span>近距離</td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <div>こちらの公式サイトを参考にして作っています。</div>
+    <div>https://www.streetfighter.com/6/ja-jp/character/ryu/movelist</div>
+  </footer>
+
+  <script>
+    // 検索フィルタ
+    (function(){
+      const filter = document.getElementById('filter');
+      const table = document.getElementById('commandTable');
+      filter.addEventListener('input', () => {
+        const q = filter.value.trim().toLowerCase();
+        const rows = table.tBodies[0].rows;
+        for (let r of rows) {
+          const text = (r.textContent || '').toLowerCase();
+          r.style.display = text.indexOf(q) === -1 ? 'none' : '';
+        }
+      });
+    })();
+
+    // クリップボードにコピー（選択行または全表をコピー）
+    /*document.getElementById('copyBtn').addEventListener('click', async () => {
+      const table = document.getElementById('commandTable');
+      const rows = Array.from(table.tBodies[0].rows).filter(r => r.style.display !== 'none');
+      if (rows.length === 0) {
+        alert('コピーする行が見つかりません。');
+        return;
+      }
+      // テキスト変換（タブ区切り）
+      const lines = rows.map(r => {
+        return Array.from(r.cells).map(c => c.innerText.trim().replace(/\s+/g,' ')).join('\\t');
+      });
+      const header = Array.from(table.tHead.rows[0].cells).map(c => c.innerText.trim()).join('\\t');
+      const txt = [header].concat(lines).join('\\n');
+      try {
+        await navigator.clipboard.writeText(txt);
+        alert('コマンドリスト（表示中）がクリップボードにコピーされました。');
+      } catch (e) {
+        // フォールバック
+        const ta = document.createElement('textarea');
+        ta.value = txt;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        alert('コピーしました（非推奨フォールバック）。');
+      }
+    });*/
+
+    // CSV エクスポート
+    /*document.getElementById('exportCsv').addEventListener('click', () => {
+      const table = document.getElementById('commandTable');
+      const rows = Array.from(table.tBodies[0].rows).filter(r => r.style.display !== 'none');
+      if (rows.length === 0) { alert('エクスポートする行がありません。'); return; }
+      const header = Array.from(table.tHead.rows[0].cells).map(c => c.innerText.trim());
+      const csv = [header].concat(rows.map(r => Array.from(r.cells).map(c => '"' + c.innerText.replace(/"/g,'""').trim() + '"')));
+      const csvText = csv.map(r => r.join(',')).join('\\n');
+      const blob = new Blob([csvText], {type:'text/csv;charset=utf-8;'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'commands.csv';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    });*/
+
+    // ここからカスタマイズ方法の表示（コンソールに簡単メッセージ）
+    console.log('このファイルを編集して、tbody に行を追加してください。入力表記は → ↓ ↘ などの矢印記号か、QCF(QCB) 等の略語でもOKです。');
+  </script>
+</body>
+</html>
